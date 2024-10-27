@@ -82,7 +82,7 @@
       </div>
 
 
-      <span class="heart" data-aos="zoom-in" data-aos-duration="8000" data-aos-easing="linear"><i class="bi bi-heart-fill"></i></span>
+      <span class="heart" data-aos="zoom-in" data-aos-duration="8000" data-aos-anchor-placement="center-center"><i class="bi bi-heart-fill"></i></span>
 
 
       <div class="col-lg-6">
@@ -175,7 +175,7 @@
     <div class="row">
       <div class="col">
         <ul class="timeline">
-          <li>
+          <li data-aos="flip-down" data-aos-duration="7000">
             <div class="timeline-image" style="background-image: url(https://picsum.photos/299/299);"></div>
             <div class="timeline-panel">
               <div class="timeline-heading">
@@ -187,7 +187,7 @@
               </div>
             </div>
           </li>
-          <li class="timeline-inverted">
+          <li class="timeline-inverted" data-aos="flip-down" data-aos-duration="8000">
             <div class="timeline-image" style="background-image: url(https://picsum.photos/300/300);"></div>
             <div class="timeline-panel">
               <div class="timeline-heading">
@@ -199,7 +199,7 @@
               </div>
             </div>
           </li>
-          <li>
+          <li data-aos="flip-down" data-aos-duration="9000">
             <div class="timeline-image" style="background-image: url(https://picsum.photos/301/301);"></div>
             <div class="timeline-panel">
               <div class="timeline-heading">
@@ -211,7 +211,7 @@
               </div>
             </div>
           </li>
-          <li class="timeline-inverted">
+          <li class="timeline-inverted" data-aos="flip-down" data-aos-duration="10000">
             <div class="timeline-image" style="background-image: url(https://picsum.photos/302/302);"></div>
             <div class="timeline-panel">
               <div class="timeline-heading">
@@ -240,27 +240,37 @@
       </div>
     </div>
     <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1 justify-content-center">
-      <div class="col mt-3">
+      <div class="col mt-3" data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000">
         <a href="img/DSCF2237.jpg" data-toggle="lightbox" data-caption="Foto Prewedding" data-gallery="mygallery">
           <img src="img/DSCF2237.jpg" alt="Khabib" class="img-fluid w-100 rounded">
         </a>
       </div>
-      <div class="col mt-3">
+      <div class="col mt-3" data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000">
         <a href="img/DSCF2129.JPG" data-toggle="lightbox" data-caption="Foto Prewedding" data-gallery="mygallery">
           <img src="img/DSCF2129.JPG" alt="Khabib2" class="img-fluid w-100 rounded">
         </a>
       </div>
-      <div class="col mt-3">
+      <div class="col mt-3" data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000">
         <a href="img/DSCF2140.JPG" data-toggle="lightbox" data-caption="Foto Prewedding" data-gallery="mygallery">
           <img src="img/DSCF2140.JPG" alt="Khabib3" class="img-fluid w-100 rounded">
         </a>
       </div>
-      <div class="col mt-3">
+      <div class="col mt-3" data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000">
         <a href="img/DSCF2164.JPG" data-toggle="lightbox" data-caption="Foto Prewedding" data-gallery="mygallery">
           <img src="img/DSCF2164.JPG" alt="Khabib3" class="img-fluid w-100 rounded">
         </a>
       </div>
-      <div class="col mt-3">
+      <div class="col mt-3" data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000">
         <a href="img/DSCF2189.JPG" data-toggle="lightbox" data-caption="Foto Prewedding" data-gallery="mygallery">
           <img src="img/DSCF2189.JPG" alt="Khabib3" class="img-fluid w-100 rounded">
         </a>
@@ -270,12 +280,16 @@
           <img src="img/DSCF2242.JPG" alt="Khabib3" class="img-fluid w-100 rounded">
         </a>
       </div>
-      <div class="col mt-3">
+      <div class="col mt-3" data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000">
         <a href="img/DSCF2150.JPG" data-toggle="lightbox" data-caption="Foto Prewedding" data-gallery="mygallery">
           <img src="img/DSCF2150.JPG" alt="Khabib3" class="img-fluid w-100 rounded">
         </a>
       </div>
-      <div class="col mt-3">
+      <div class="col mt-3" data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000">
         <a href="img/DSCF2202.JPG" data-toggle="lightbox" data-caption="Foto Prewedding" data-gallery="mygallery">
           <img src="img/DSCF2202.JPG" alt="Khabib3" class="img-fluid w-100 rounded">
         </a>
@@ -527,6 +541,7 @@
       const urlParams = new URLSearchParams(window.location.search);
       const nama = urlParams.get('nama') || '';
       const pronoun = urlParams.get('p') || 'Bapak/Ibu/Saudara/i';
+      
 
       const namaContainer = document.querySelector('.hero h4 span');
       namaContainer.innerText = `${pronoun} ${nama},`.replace(/ ,$/, ',');
@@ -546,6 +561,13 @@
     <script>
         const homeh2 = document.querySelector('#home h2');
         const infop = document.querySelector('.info p');
+        const storyspan = document.querySelector('.story span');
+        const storyh2 = document.querySelector('.story h2');
+        const storyp = document.querySelector('.story p');
+        const galleryspan = document.querySelector('.gallery span');
+        const galleryh2 = document.querySelector('.gallery h2');
+        const galleryp = document.querySelector('.gallery p');
+        
 
         function backInDown(element) {
             const observer = new IntersectionObserver(entries => {
@@ -565,7 +587,31 @@
                     if (entry.isIntersecting) {
                         entry.target.classList.add("animate__animated")
                         entry.target.classList.add("animate__fadeIn");
+                        entry.target.style.animationDuration = "3s";
+                    }
+                });
+            });
+            observer.observe(element);
+        }
+        function fadeIn2(element) {
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("animate__animated")
+                        entry.target.classList.add("animate__fadeIn");
                         entry.target.style.animationDuration = "5s";
+                    }
+                });
+            });
+            observer.observe(element);
+        }
+        function fadeIn3(element) {
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("animate__animated")
+                        entry.target.classList.add("animate__fadeIn");
+                        entry.target.style.animationDuration = "7s";
                     }
                 });
             });
@@ -574,6 +620,12 @@
 
         backInDown(homeh2);
         fadeIn(infop);
+        fadeIn(storyspan);
+        fadeIn2(storyh2);
+        fadeIn3(storyp);
+        fadeIn(galleryspan);
+        fadeIn2(galleryh2);
+        fadeIn3(galleryp);
         
      </script>
   </body>

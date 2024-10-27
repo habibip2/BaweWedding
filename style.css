@@ -37,6 +37,16 @@ body{
 .hero h1{
     font-family: 'Sacramento', cursive;
     font-size: 6rem;
+    animation: slideIn 5s ease forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-200px); /* Mulai dari posisi di luar layar */
+    }
+    100% {
+        transform: translateX(0); /* Berhenti di posisi aslinya */
+    }
 }
 
 .hero h4{
@@ -45,6 +55,19 @@ body{
 
 .hero p{
     font-size: 1.4rem;
+}
+
+.hero h4, .hero p{
+    animation: slideOf 5s ease forwards;
+}
+
+@keyframes slideOf{
+    0% {
+        transform : translateX(200px);
+    }
+    100%{
+        transform: translateX(0);
+    }
 }
 
 .hero a{
@@ -478,4 +501,9 @@ footer li{
         top: 31px;
     }
 
+}
+@media (max-width : 360px){
+    .simply-countdown>.simply-section{
+        padding: 30px;
+    }
 }
